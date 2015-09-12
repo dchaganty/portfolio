@@ -26,11 +26,12 @@ public class Ghost {
 		Random s = new Random();
 		int yLow = 0;
 		int yHigh = 1000;
-		int S = s.nextInt(yHigh - yLow) + yLow;
+		int S = s.nextInt(yHigh - yLow) + yLow; //generates random positions for the ghosts to start at 
 		this.x = R;
 		this.y = S;
 	}
 
+	//updates the positions of the ghosts as the game continues and makes them move randomly across the screen
 	private void update() {
 		int random = (int) (10 * Math.random() + 0.5);
 		if (x > gameView.getWidth() - bmp.getWidth() - xSpeed) {
@@ -50,6 +51,7 @@ public class Ghost {
 		y = y + ySpeed;
 	}
 
+	//draws the ghost images on the screen
 	public void onDraw(Canvas canvas, boolean killed, float hx, float hy, boolean rp, Hunter h) {
 		if (rp && count > 0 && !killed) {
 			this.x = (canvas.getWidth()/2 + h.getXPos()) % canvas.getWidth();
