@@ -41,7 +41,7 @@ public class WinActivity extends SurfaceView{
 		win = "You Win";
 	}
 	protected void onDraw(Canvas canvas, float hx, float hy) {
-		canvas.drawColor(Color.BLACK);
+	    canvas.drawColor(Color.BLACK);
 	    //Drawing score
 	    Paint paint = new Paint();
 	    paint.setColor(Color.MAGENTA);
