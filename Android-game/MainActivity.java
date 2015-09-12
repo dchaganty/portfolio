@@ -26,22 +26,19 @@ public class MainActivity extends Activity implements SensorEventListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		gv = new GameView(this);
-		//setContentView(R.layout.activity_main);
 		setContentView(gv);
 		MediaPlayer mp = MediaPlayer.create(this, R.raw.evil_laugh);
-        mp.start();
-        if (gv.win() == true) {
-        	Toast.makeText(MainActivity.this, "You Win! Your time was " + gv.getTime(), Toast.LENGTH_SHORT).show();
-        }
-        if (gv.lose() == true) {
-        	Toast.makeText(MainActivity.this, "You Lose!", Toast.LENGTH_SHORT).show();
-//        Intent i = new Intent(MainActivity.this, WinActivity.class);
-//        startActivity(i);
-        }
-       
-        
-		
-		
+	        mp.start();
+	        
+                if (gv.win() == true) {
+                	//creates a winner message when the player kills all of the ghosts
+        		Toast.makeText(MainActivity.this, "You Win! Your time was " + gv.getTime(), Toast.LENGTH_SHORT).show();
+		}
+		if (gv.lose() == true) {
+			//creates a loser message when the player gets killed by the ghosts
+        		Toast.makeText(MainActivity.this, "You Lose!", Toast.LENGTH_SHORT).show();
+		}
+      
 	}
 	
 //	long timer = 0;
