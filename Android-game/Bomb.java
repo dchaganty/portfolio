@@ -32,6 +32,8 @@ public class Bomb {
 	public int getHeight() {
 		return this.height;
 	}
+	
+	//draws bomb onto the screen
 	public void onDraw(Canvas canvas, boolean explode, float x, float y) {
 
 		if (explode == false) {
