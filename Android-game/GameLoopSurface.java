@@ -31,7 +31,7 @@ public class GameLoopSurface extends AsyncTask<Void, Void, Void> {
 		hx = 500;//for hunter initial x position
 		hy = 500;//for hunter initial y position
 		gv.setOnTouchListener(new OnTouchListener() {
-
+			//creates the touch screen ability to move player with your finger
 			public boolean onTouch(View v, MotionEvent e) {
 				x = e.getX();
 				y = e.getY();
