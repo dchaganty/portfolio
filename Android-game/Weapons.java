@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
 public class Weapons {
-	 private int x; 
+     private int x; 
      private int y;
      private int xSpeed = 10;
      private int ySpeed = 10;
@@ -14,12 +14,12 @@ public class Weapons {
      private Bitmap bmp;
     
      public Weapons(GameView gameView, Bitmap bmp) {
-           this.gameView=gameView;
-           this.bmp=bmp;
-           Random r = new Random();
+        this.gameView=gameView;
+        this.bmp=bmp;
+        Random r = new Random();
        	int xLow = 0;
        	int xHigh = 1000;
-       	int R = r.nextInt(xHigh-xLow) + xLow;
+       	int R = r.nextInt(xHigh-xLow) + xLow;//creates a random position for the weapons to start on when game is started
        	
        	Random s = new Random();
        	int yLow = 0;
@@ -30,7 +30,7 @@ public class Weapons {
      }
 
      private void update() {
-  	   	int random = (int) (10*Math.random() + 0.5);
+  	   int random = (int) (10*Math.random() + 0.5);
            if (x > gameView.getWidth() - bmp.getWidth() - xSpeed) {
                   xSpeed = -20 + random;
            }
@@ -47,7 +47,7 @@ public class Weapons {
            }
            y = y + ySpeed;
      }
-     
+     //draws weapon image onto canvas
      public void onDraw(Canvas canvas, boolean hasit, float hx, float hy) {
     	 if(hasit == false) {
     		 update();
