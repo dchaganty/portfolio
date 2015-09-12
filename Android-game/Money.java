@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
 public class Money {
-	 private int x; 
+     private int x; 
      private int y;
      private int xSpeed = 15;
      private int ySpeed = 15;
@@ -17,20 +17,20 @@ public class Money {
            this.gameView=gameView;
            this.bmp=bmp;
            Random r = new Random();
-       	int xLow = 0;
-       	int xHigh = 1000;
-       	int R = r.nextInt(xHigh-xLow) + xLow;
+       	   int xLow = 0;
+           int xHigh = 1000;
+           int R = r.nextInt(xHigh-xLow) + xLow;
        	
-       	Random s = new Random();
-       	int yLow = 0;
-       	int yHigh = 1000;
-       	int S = s.nextInt(yHigh-yLow) + yLow;
+       	   Random s = new Random();
+           int yLow = 0;
+       	   int yHigh = 1000;
+       	   int S = s.nextInt(yHigh-yLow) + yLow;
            this.x = R;
            this.y = S;
      }
 
      private void update() {
-  	   	int random = (int) (10*Math.random() + 0.5);
+  	   int random = (int) (10*Math.random() + 0.5);
            if (x > gameView.getWidth() - bmp.getWidth() - xSpeed) {
                   xSpeed = -20 + random;
            }
