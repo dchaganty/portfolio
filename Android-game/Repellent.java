@@ -15,7 +15,7 @@ public class Repellent {
 	private int width, height;
 	private boolean used;
 	private int count = 0;
-
+ 
 	public Repellent(GameView gameView, Bitmap bmp, Hunter h) {
 		this.gv = gameView;
 		this.bmp = bmp;
