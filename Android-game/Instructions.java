@@ -13,7 +13,7 @@ public class Instructions extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruct);
- Thread timer = new Thread() {
+        Thread timer = new Thread() {
             public void run() {
             	try {
             		sleep(8000);
